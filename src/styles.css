@@ -1,20 +1,137 @@
+@font-face {
+    font-family: "Myriad Pro Semibold Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Myriad Pro Semibold Italic"),
+      url("../src/fonts/MYRIADPRO-SEMIBOLDIT.woff") format("woff");
+}
+  
+@font-face {
+    font-family: "Myriad Pro Bold Condensed";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Myriad Pro Bold Condensed"),
+      url("../src/fonts/MYRIADPRO-BOLDCOND.woff") format("woff");
+}
+  
+@font-face {
+    font-family: "Myriad Pro Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Myriad Pro Bold"),
+      url("../src/fonts/MYRIADPRO-BOLD.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Myriad Pro Light";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Myriad Pro Light"),
+      url("../src/fonts/MyriadPro-Light.woff") format("woff");
+}
+  
+@font-face {
+    font-family: "Myriad Pro Semibold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Myriad Pro Semibold"),
+      url("../src/fonts/MYRIADPRO-SEMIBOLD.woff") format("woff");
+}
+
+body {
+    margin: 0;
+  }
+
 header {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("../src/images/headerBG.png") no-repeat fixed top center;
+    background-size: 100%;
+    height: 220px;
+    margin: auto;
+}
+
+.header-options {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url("https://freerangestock.com/sample/70907/open-book-showing-words.jpg") repeat fixed top center;
-    height: 200px;
-    margin: auto;
+    width: 52%;
 }
 
 .header-text {
+    font-family: "Myriad Pro Semibold";
+    font-size: 48px;
+    margin: 20px;
     color: white;
 }
 
-body input, button, p {
+.header-options input, select {
+    font-family: "Myriad Pro Semibold";
+    border: none;
+    outline: none;
+    padding-left: 8px;
+    font-size: 18px;
+    height: 32px;
+}
+
+.options-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
     width: 100%;
-    max-width: 300px;
-    margin-bottom: 10px;
-  }
+}
+
+.options-search i{
+    position: absolute;
+    top: 3px;
+    right: 7%;
+}
+
+.options-search input{
+    width: 87%;
+    margin-bottom: 20px;
+}
+
+.options-search input:focus {
+    outline: none;
+}
+
+.search-icon {
+    background: url(../src/images/lupa.png) no-repeat top center;
+    background-size: 100%;
+    width: 26px;
+    height: 26px;
+}
+
+.options-filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2%;
+}
+
+.options-filters div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.options-filters span {
+    font-family: "Myriad Pro Semibold";
+    font-size: 18px;
+    color: white;
+    margin-right: 6px;
+}
+
+.header-options select {
+    font-size: 16px;
+    width: 67%;
+    color: gray;
+}

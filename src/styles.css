@@ -1,0 +1,20 @@
+header {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("https://freerangestock.com/sample/70907/open-book-showing-words.jpg") repeat fixed top center;
+    height: 200px;
+    margin: auto;
+}
+
+.header-text {
+    color: white;
+}
+
+body input, button, p {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 10px;
+  }

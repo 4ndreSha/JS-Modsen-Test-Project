@@ -1,12 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
     return <>
         <header>
-            <h1 class="header-text">Search for books</h1>
+            <h1 class="header-text">
+                <Link class="link" to="/">Search for books</Link>
+            </h1>
             <div class="header-options">
                 <div class="options-search">
-                    <input type="text" placeholder="What do you want?"/>
+                    <input type="text" id="search-field" placeholder="What do you want?" onkeydown="search(this)"/>
                     <i class="search-icon" aria-hidden="true"></i>
                 </div>
                 <div class="options-filters">

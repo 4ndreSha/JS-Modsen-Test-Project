@@ -1125,6 +1125,11 @@
   "resolved" "https://registry.npmjs.org/@pkgjs/parseargs/-/parseargs-0.11.0.tgz"
   "version" "0.11.0"
 
+"@remix-run/router@1.16.1":
+  "integrity" "sha512-es2g3dq6Nb07iFxGk5GuHN20RwBZOsuDQN7izWIisUcv9r+d2C5jQxqmgkdebXgReWfiyUabcki6Fg77mSNrig=="
+  "resolved" "https://registry.npmjs.org/@remix-run/router/-/router-1.16.1.tgz"
+  "version" "1.16.1"
+
 "@types/body-parser@*":
   "integrity" "sha512-fB3Zu92ucau0iQ0JMCFQE7b/dv8Ot07NI3KaZIkIUNXq82k4eBAqUaneXfleGY9JWskeS9y+u0nXMyspcuQrCg=="
   "resolved" "https://registry.npmjs.org/@types/body-parser/-/body-parser-1.19.5.tgz"
@@ -3403,7 +3408,7 @@
     "iconv-lite" "0.4.24"
     "unpipe" "1.0.0"
 
-"react-dom@^18.3.1":
+"react-dom@^18.3.1", "react-dom@>=16.8":
   "integrity" "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz"
   "version" "18.3.1"
@@ -3411,7 +3416,22 @@
     "loose-envify" "^1.1.0"
     "scheduler" "^0.23.2"
 
-"react@^18.3.1":
+"react-router-dom@^6.23.1":
+  "integrity" "sha512-utP+K+aSTtEdbWpC+4gxhdlPFwuEfDKq8ZrPFU65bbRJY+l706qjR7yaidBpo3MSeA/fzwbXWbKBI6ftOnP3OQ=="
+  "resolved" "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.23.1.tgz"
+  "version" "6.23.1"
+  dependencies:
+    "@remix-run/router" "1.16.1"
+    "react-router" "6.23.1"
+
+"react-router@6.23.1":
+  "integrity" "sha512-fzcOaRF69uvqbbM7OhvQyBTFDVrrGlsFdS3AL+1KfIBtGETibHzi3FkoTRyiDJnWNc2VxrfvR+657ROHjaNjqQ=="
+  "resolved" "https://registry.npmjs.org/react-router/-/react-router-6.23.1.tgz"
+  "version" "6.23.1"
+  dependencies:
+    "@remix-run/router" "1.16.1"
+
+"react@^18.3.1", "react@>=16.8":
   "integrity" "sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.3.1.tgz"
   "version" "18.3.1"

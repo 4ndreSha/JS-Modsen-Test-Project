@@ -138,3 +138,25 @@ header {
     width: 67%;
     color: gray;
 }
+
+.books-found {
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+    font-family: "Myriad Pro Semibold";
+    padding-bottom: 27px;
+}
+
+.book-card__collection {
+    display: flex;
+    justify-content:left;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.book-card {
+    width: 232px;
+    height: 352px;
+    margin-bottom: 26px;
+    background-color: #f3f2f1;
+}

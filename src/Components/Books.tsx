@@ -1,10 +1,20 @@
 import React from 'react'
 import BookCard from './book-card';
 
+var numberOfResults = 10;
+
 function Books() {
     return <>
         <section class="books">
-            <BookCard />
+            <div class="books-found">Found {numberOfResults} results</div>
+            <div class="book-card__collection">
+                <BookCard />
+                <BookCard />
+                <BookCard />
+                <BookCard />
+                <BookCard />
+                <BookCard />
+            </div>
         </section>
     </>
 }

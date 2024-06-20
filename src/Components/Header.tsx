@@ -14,9 +14,12 @@ function Header() {
                         <span class="filters-categories__text">Categories</span>
                         <select id="book-categories">
                             <option value="all">all</option>
-                            <option value="programming">programming</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
+                            <option value="art">art</option>
+                            <option value="biography">biography</option>
+                            <option value="computers">computers</option>
+                            <option value="history">history</option>
+                            <option value="medical">medical</option>
+                            <option value="poetry">poetry</option>
                         </select>
                     </div>
                     
@@ -24,7 +27,7 @@ function Header() {
                         <span class="filters-sortby__text">Sorting by</span>
                         <select id="book-sortby">
                             <option value="relevance">relevance</option>
-                            <option value="date">date</option>
+                            <option value="newest">newest</option>
                         </select>
                     </div>
                 </div>

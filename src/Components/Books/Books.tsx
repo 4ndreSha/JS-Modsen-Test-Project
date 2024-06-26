@@ -1,5 +1,5 @@
 import React from 'react'
-import BookCard from './book-card';
+import BookCard from '../BookCard/BookCard';
 
 var numberOfResults = 10;
 

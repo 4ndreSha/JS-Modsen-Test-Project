@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../Components/Header';
-import Books from '../Components/Books';
+import Header from '../Components/Header/Header';
+import Books from '../Components/Books/Books';
 
 function BookPage() {
     return <>

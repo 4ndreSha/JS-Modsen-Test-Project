@@ -1,100 +1,100 @@
-
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: url("../../images/headerBG.png") no-repeat fixed top center;
-    background-size:cover;
-    height: 220px;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('../../images/headerBG.png') no-repeat fixed top center;
+  background-size: cover;
+  height: 220px;
+  margin: auto;
 }
 
 .header-options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 52%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 52%;
 }
 
 .header-text .link {
-    color: white;
+  color: white;
 }
 
 .header-text {
-    font-family: "Myriad Pro Semibold";
-    font-size: 48px;
-    margin: 20px;
+  font-family: 'Myriad Pro Semibold';
+  font-size: 48px;
+  margin: 20px;
 }
 
-.header-options input, select {
-    font-family: "Myriad Pro Semibold";
-    border: none;
-    outline: none;
-    padding-left: 8px;
-    font-size: 18px;
-    height: 32px;
+.header-options input,
+select {
+  font-family: 'Myriad Pro Semibold';
+  border: none;
+  outline: none;
+  padding-left: 8px;
+  font-size: 18px;
+  height: 32px;
 }
 
 .options-search {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 
-.options-search i{
-    position: absolute;
-    top: 3px;
-    right: 7%;
+.options-search i {
+  position: absolute;
+  top: 3px;
+  right: 7%;
 }
 
-.options-search input{
-    width: 87%;
-    margin-bottom: 20px;
+.options-search input {
+  width: 87%;
+  margin-bottom: 20px;
 }
 
 .options-search input:focus {
-    outline: none;
+  outline: none;
 }
 
 .search-icon {
-    background: url(../../images/lupa.png) no-repeat top center;
-    background-size: 100%;
-    width: 26px;
-    height: 26px;
+  background: url(../../images/lupa.png) no-repeat top center;
+  background-size: 100%;
+  width: 26px;
+  height: 26px;
 }
 
 .options-filters {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2%;
 }
 
 .options-filters div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .options-filters span {
-    font-family: "Myriad Pro Semibold";
-    font-size: 18px;
-    white-space: nowrap;
-    color: white;
-    margin-right: 6px;
+  font-family: 'Myriad Pro Semibold';
+  font-size: 18px;
+  white-space: nowrap;
+  color: white;
+  margin-right: 6px;
 }
 
 .header-options select {
-    min-width: 96px;
-    max-width: 200px;
-    font-size: 16px;
-    width: 67%;
-    color: gray;
+  min-width: 96px;
+  max-width: 200px;
+  font-size: 16px;
+  width: 67%;
+  color: gray;
 }

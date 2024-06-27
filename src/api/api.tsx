@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const getBooks = async form => {
-  const API_KEY = 'AIzaSyDiXSqDNIa5NHW-DtE-4v6b_elG8lpESh8';
-  const url = 'https://www.googleapis.com/books/v1/volumes';
+  const API_KEY = process.env.API_KEY;
+  const url = process.env.API_URL;
 
   const response = await axios.get(url, {
     params: {
@@ -16,8 +16,8 @@ const getBooks = async form => {
 };
 
 const getBookById = async bookId => {
-  const API_KEY = 'AIzaSyDiXSqDNIa5NHW-DtE-4v6b_elG8lpESh8';
-  const url = `https://www.googleapis.com/books/v1/volumes/${bookId}`;
+  const API_KEY = process.env.API_KEY;
+  const url = `${process.env.API_URL}/${bookId}`;
 
   const response = await axios.get(url, {
     params: {

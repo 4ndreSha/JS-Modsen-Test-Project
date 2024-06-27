@@ -56,9 +56,7 @@ function BookInfo() {
                 <div class='book-info__container'>
                     <div class='book-info__text'>
                         <div class='book-info__category'>{book.categories}</div>
-                        <Link class='link' to="">
-                            <div class='book-info__name'>{book.title}</div>
-                        </Link>
+                        <div class='book-info__name'>{book.title}</div>
                         <div class='book-info__author'>{book.authors}</div>
                         <div class='book-info__description'>{book.description}</div>
                     </div>

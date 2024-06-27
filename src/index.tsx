@@ -12,7 +12,7 @@ root.render(
       <App />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/book' element={<BookPage />} />
+        <Route path='/book/:id' element={<BookPage />} />
       </Routes>
     </HashRouter>
   </React.StrictMode>

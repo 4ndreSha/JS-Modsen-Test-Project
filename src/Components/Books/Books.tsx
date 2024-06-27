@@ -1,12 +1,12 @@
 import React from 'react';
 import BookCard from '../BookCard/BookCard';
-import { getBooks } from '../../api/api';
-import { useState, useEffect, useCallback } from 'react';
+import {getBooks} from '../../api/api';
+import {useState, useEffect, useCallback} from 'react';
 import './styles.css';
 
 function Books() {
   const [books, setBooks] = useState([]);
-  const [form, setForm] = useState({ title: 'mem', subject: 'all', sorting: '' });
+  const [form, setForm] = useState({title: 'mem', subject: 'all', sorting: ''});
   const [loading, setLoading] = useState(false);
 
   const normalizeBookData = book => {
@@ -16,7 +16,7 @@ function Books() {
       categories: book.volumeInfo.categories ? book.volumeInfo.categories.join(', ') : 'No categories',
       title: book.volumeInfo.title || 'No title',
       authors: book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown author',
-      imageClass: book.imageClass || 'defaultImageClass',
+      imageClass: book.imageClass || 'defaultImageClass'
     };
   };
 
@@ -39,23 +39,11 @@ function Books() {
     searchBooks();
   }, [searchBooks]);
 
-  function cutText(string: String, maxLength) {
-    return string.substring(0, maxLength) + "..."
-  }
-
   return (
     <>
       <section class='books'>
         <div class='books-found'>Found {books.length} results</div>
-        <div class='book-card__collection'>
-          {loading ? (
-            <div>Loading</div>
-          ) : (
-            books.map((book, i) => (
-              <BookCard key={i} book={book}/>
-            ))
-          )}
-        </div>
+        <div class='book-card__collection'>{loading ? <div>Loading</div> : books.map((book, i) => <BookCard key={i} book={book} />)}</div>
       </section>
     </>
   );

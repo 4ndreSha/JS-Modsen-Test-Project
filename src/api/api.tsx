@@ -9,8 +9,8 @@ const getBooks = async form => {
       q: form.title || 'all',
       orderBy: form.sorting || 'relevance',
       key: API_KEY,
-      maxResults: 40,
-    },
+      maxResults: 40
+    }
   });
   return response;
 };
@@ -21,9 +21,9 @@ const getBookById = async bookId => {
 
   const response = await axios.get(url, {
     params: {
-      key: API_KEY,
-    },
+      key: API_KEY
+    }
   });
   return response;
 };
-export { getBooks, getBookById };
+export {getBooks, getBookById};

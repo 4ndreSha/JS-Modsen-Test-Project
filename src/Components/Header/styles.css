@@ -2,7 +2,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url('../../images/headerBG.png') no-repeat fixed top center;
+  background: url('../../assets/images/headerBG.png') no-repeat fixed top center;
   background-size: cover;
   height: 220px;
   margin: auto;
@@ -60,7 +60,7 @@ select {
 }
 
 .search-icon {
-  background: url(../../images/lupa.png) no-repeat top center;
+  background: url(../../assets/images/lupa.png) no-repeat top center;
   background-size: 100%;
   width: 26px;
   height: 26px;

@@ -59,22 +59,22 @@
 .book-card__category {
   text-decoration: underline;
   -webkit-line-clamp: 1; /* number of lines to show */
-    line-clamp: 1;
+  line-clamp: 1;
 }
 
 .book-card__name {
   -webkit-line-clamp: 3; /* number of lines to show */
-    line-clamp: 3;
+  line-clamp: 3;
 }
 
 .book-card__author {
   -webkit-line-clamp: 2; /* number of lines to show */
-    line-clamp: 2;
+  line-clamp: 2;
 }
 
 .truncate {
   overflow: hidden;
-   text-overflow: ellipsis;
-   display: -webkit-box;
-   -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }

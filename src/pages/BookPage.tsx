@@ -1,5 +1,5 @@
 import React from 'react';
-import BookInfo from '../Components/BookInfo/BookInfo';
+import BookInfo from '../components/BookInfo/BookInfo';
 
 function BookPage() {
   return (

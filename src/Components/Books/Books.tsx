@@ -8,6 +8,7 @@ function Books() {
   const [books, setBooks] = useState([]);
   const [form, setForm] = useState({title: 'mem', subject: 'all', sorting: ''});
   const [loading, setLoading] = useState(false);
+  const [totalBooks, setTotalBooks] = useState([]);
 
   const normalizeBookData = book => {
     return {
@@ -25,6 +26,7 @@ function Books() {
     try {
       const response = await getBooks(form);
       //console.log(JSON.stringify(response));
+      setTotalBooks(response.data.totalItems);
 
       const normalizedData = (response.data.items || []).map(normalizeBookData);
       setBooks(normalizedData);
@@ -42,8 +44,11 @@ function Books() {
   return (
     <>
       <section class='books'>
-        <div class='books-found'>Found {books.length} results</div>
-        <div class='book-card__collection'>{loading ? <div>Loading</div> : books.map((book, i) => <BookCard key={i} book={book} />)}</div>
+        <div class='books-found'>Found {totalBooks} results</div>
+        <div class='book-card__collection'>
+          {loading ? <div>Loading</div>
+           : books.map((book, i) => <BookCard key={i} book={book} />)}
+        </div>
       </section>
     </>
   );

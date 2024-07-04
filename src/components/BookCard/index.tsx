@@ -7,7 +7,7 @@ function BookCard(props: any) {
   var bookLink = '/book/' + bookData.id;
   return (
     <>
-      <div class='book-card'>
+      <div class='book-card' key={bookData.id}>
         <div class='book-card__image'>
           <img src={bookData.imageUrl} />
         </div>

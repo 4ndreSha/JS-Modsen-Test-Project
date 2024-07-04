@@ -21,7 +21,7 @@ function Books({ form }) {
   };
 
   const searchBooks = useCallback(async () => {
-    //setLoading(true);
+    setLoading(true);
     try {
       const response = await getBooks(form);
       setTotalBooks(response.data.totalItems);
@@ -31,7 +31,7 @@ function Books({ form }) {
     } catch (error) {
       console.error('Failed to fetch books from Google Books API:', error);
     } finally {
-      //setLoading(false);
+      setLoading(false);
     }
   }, [form]);
 

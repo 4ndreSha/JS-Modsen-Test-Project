@@ -1,6 +1,6 @@
 import React from 'react';
-import Books from '../components/Books/Books';
-import Header from '../components/Header/Header';
+import Books from '../components/Books';
+import Header from '../components/Header';
 import {useState, useEffect, useCallback} from 'react';
 
 function Home() {

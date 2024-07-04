@@ -1,5 +1,5 @@
 import React from 'react';
-import BookCard from '../BookCard/BookCard';
+import BookCard from '../BookCard';
 import {getBooks} from '../../api/api';
 import {useState, useEffect, useCallback} from 'react';
 import './styles.css';

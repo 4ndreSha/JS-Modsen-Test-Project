@@ -1,6 +1,6 @@
 import React from 'react';
-import BookInfo from '../components/BookInfo/BookInfo';
-import Header from '../components/Header/Header';
+import BookInfo from '../components/BookInfo';
+import Header from '../components/Header';
 
 function BookPage() {
   return (

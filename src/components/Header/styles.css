@@ -51,8 +51,10 @@ select {
 }
 
 .options-search input {
-  width: 87%;
+  width: 84%;
   margin-bottom: 20px;
+  margin-right: 20px;
+  padding-right: 40px;
 }
 
 .options-search input:focus {
@@ -64,6 +66,7 @@ select {
   background-size: 100%;
   width: 26px;
   height: 26px;
+  cursor: pointer;
 }
 
 .options-filters {

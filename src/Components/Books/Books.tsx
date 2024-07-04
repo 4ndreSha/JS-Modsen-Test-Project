@@ -4,9 +4,8 @@ import {getBooks} from '../../api/api';
 import {useState, useEffect, useCallback} from 'react';
 import './styles.css';
 
-function Books() {
+function Books({ form }) {
   const [books, setBooks] = useState([]);
-  const [form, setForm] = useState({title: 'mem', subject: 'all', sorting: ''});
   const [loading, setLoading] = useState(false);
   const [totalBooks, setTotalBooks] = useState([]);
 
@@ -25,7 +24,6 @@ function Books() {
     setLoading(true);
     try {
       const response = await getBooks(form);
-      //console.log(JSON.stringify(response));
       setTotalBooks(response.data.totalItems);
 
       const normalizedData = (response.data.items || []).map(normalizeBookData);

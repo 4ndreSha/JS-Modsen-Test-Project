@@ -15,7 +15,7 @@ function Header({ onChange, followLink = false, localForm = null}) {
   }
 
   const sendForm = () => {
-    if(followLink = true)
+    if(followLink == true)
       navigate("/");
     else
       onChange(form);

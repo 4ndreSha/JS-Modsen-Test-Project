@@ -47,7 +47,7 @@ function BookInfo() {
   return (
     <>
       {loading ? (
-        <div>Loading</div>
+        <div class="loading"></div>
       ) : (
         <section class='book-info'>
           <div class='book-info__image'>

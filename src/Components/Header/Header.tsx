@@ -3,17 +3,22 @@ import {Link} from 'react-router-dom';
 import './styles.css';
 import {useState, useEffect, useCallback} from 'react';
 import Selector from '../Selector';
+import {useNavigate} from "react-router-dom";
 
-function Header({ onChange }) {
+function Header({ onChange, followLink = false, localForm = null}) {
   const [book, setBook] = useState([]);
   const [form, setForm] = useState({title: 'mem', subject: 'all', sorting: 'relevance'});
+  const navigate = useNavigate();
 
   const handleInputChange = (key: string, value) => {
     setForm({ ...form, [key]: value});
   }
 
   const sendForm = () => {
-    onChange(form);
+    if(followLink = true)
+      navigate("/");
+    else
+      onChange(form);
   }
 
   const handleKeyDown = (e) => {

@@ -59,15 +59,6 @@
   }
 }
 
-.book-card__collection {
-  display: flex;
-  justify-content: center;
-  margin-left: 5px;
-  margin-right: 5px;
-  flex-wrap: wrap;
-  column-gap: 3%;
-}
-
 .book-card {
   font-family: 'Myriad Pro Semibold';
   background-color: #f3f2f1;

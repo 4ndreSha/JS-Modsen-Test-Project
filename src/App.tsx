@@ -1,12 +1,10 @@
-import './styles.css'
-import Header from './Components/Header'
+import './styles.css';
 
 export const App = () => {
-    return (
-        <div>
-            <Header />
-        </div>
-    );
-}
+  return (
+    <>
+    </>
+  );
+};
 
 export default App;

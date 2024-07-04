@@ -1,14 +1,14 @@
-import React from 'react'
-import Header from '../Components/Header';
-import Books from '../Components/Books';
+import React from 'react';
+import BookInfo from '../components/BookInfo';
+import Header from '../components/Header';
 
 function BookPage() {
-    return <>
-        <Books />
-        <Header />
-        <Books />
-        <Books />
+  return (
+    <>
+      <Header followLink={true}/>
+      <BookInfo />
     </>
+  );
 }
 
 export default BookPage;

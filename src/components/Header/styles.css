@@ -1,0 +1,128 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('../../assets/images/headerBG.png') no-repeat fixed top center;
+  background-size: cover;
+  height: 220px;
+  margin: auto;
+}
+
+@media only screen and (min-width:540px) {
+  .header-text {
+    font-size: 48px;
+  }
+
+  .options-filters {
+    gap: 2%;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .header-text {
+    font-size: 36px;
+  }
+  
+  .filters-categories, .filters-sortby{
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+  }
+  
+  .options-filters {
+    gap: 7%;
+  }
+
+
+}
+
+.header-text {
+  font-family: 'Myriad Pro Semibold';
+  margin: 20px;
+}
+
+.header-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 52%;
+}
+
+.header-text .link {
+  color: white;
+}
+
+.header-options input,
+select {
+  font-family: 'Myriad Pro Semibold';
+  border: none;
+  outline: none;
+  padding-left: 8px;
+  font-size: 18px;
+  height: 32px;
+}
+
+.options-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.options-search i {
+  position: absolute;
+  top: 3px;
+  right: 7%;
+}
+
+.options-search input {
+  width: 84%;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding-right: 40px;
+}
+
+.options-search input:focus {
+  outline: none;
+}
+
+.search-icon {
+  background: url(../../assets/images/lupa.png) no-repeat top center;
+  background-size: 100%;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.options-filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.options-filters div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.options-filters span {
+  font-family: 'Myriad Pro Semibold';
+  font-size: 18px;
+  white-space: nowrap;
+  color: white;
+  margin-right: 6px;
+}
+
+.header-options select {
+  min-width: 96px;
+  max-width: 200px;
+  font-size: 16px;
+  width: 67%;
+  color: gray;
+}

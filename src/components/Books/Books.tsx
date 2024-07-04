@@ -21,7 +21,7 @@ function Books({ form }) {
   };
 
   const searchBooks = useCallback(async () => {
-    setLoading(true);
+    //setLoading(true);
     try {
       const response = await getBooks(form);
       setTotalBooks(response.data.totalItems);
@@ -31,7 +31,7 @@ function Books({ form }) {
     } catch (error) {
       console.error('Failed to fetch books from Google Books API:', error);
     } finally {
-      setLoading(false);
+      //setLoading(false);
     }
   }, [form]);
 
@@ -39,14 +39,30 @@ function Books({ form }) {
     searchBooks();
   }, [searchBooks]);
 
+  const loadMore = async () => {
+    setLoading(true);
+    try {
+      const response = await getBooks(form, books.length, 30);
+
+      const newBooks = (response.data.items || []).map(normalizeBookData);
+      setBooks(prevBooks => [...prevBooks, ...newBooks]);
+    } catch (error) {
+      console.error('Failed to fetch books from Google Books API:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <section class='books'>
         <div class='books-found'>Found {totalBooks} results</div>
         <div class='book-card__collection'>
-          {loading ? <div>Loading</div>
-           : books.map((book, i) => <BookCard key={i} book={book} />)}
+          {books.map((book, i) => <BookCard key={i} book={book} />)}
         </div>
+        <button onClick={loadMore} class="load-button">
+            {loading ? 'Loading...' : 'Load more'}
+        </button>
       </section>
     </>
   );

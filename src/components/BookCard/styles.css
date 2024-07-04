@@ -6,6 +6,59 @@
   padding-bottom: 27px;
 }
 
+@media only screen and (min-width:540px) {
+  .book-card {
+    width: 232px;
+    height: 352px;
+    margin-bottom: 26px;
+  }
+  
+  .book-card__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 174px;
+    margin-top: 30px;
+    margin-bottom: 18px;
+  }
+  
+  .book-card__image img {
+    max-height: 174px;
+  }
+
+  .book-card__name {
+    -webkit-line-clamp: 3; /* number of lines to show */
+    line-clamp: 3;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .book-card {
+    width: 174px;
+    height: 270px;
+    margin-bottom: 17px;
+  }
+
+  .book-card__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 130px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+  }
+  .book-card__image img {
+    max-height: 130px;
+  }
+    
+  .book-card__name {
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2;
+  }
+}
+
 .book-card__collection {
   display: flex;
   justify-content: center;
@@ -17,9 +70,6 @@
 
 .book-card {
   font-family: 'Myriad Pro Semibold';
-  width: 232px;
-  height: 352px;
-  margin-bottom: 26px;
   background-color: #f3f2f1;
 }
 
@@ -27,21 +77,10 @@
   margin: 0 14px;
 }
 
-.book-card__image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  height: 174px;
-  margin-top: 30px;
-  margin-bottom: 18px;
-}
-
 .book-card__image img {
   box-shadow:
     inset 0 0 0 0 #f3f2f1,
     0.5em 0.5em 1em rgba(56, 56, 56, 0.3);
-  max-height: 174px;
 }
 
 .book-card__category,
@@ -60,11 +99,6 @@
   text-decoration: underline;
   -webkit-line-clamp: 1; /* number of lines to show */
   line-clamp: 1;
-}
-
-.book-card__name {
-  -webkit-line-clamp: 3; /* number of lines to show */
-  line-clamp: 3;
 }
 
 .book-card__author {

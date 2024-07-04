@@ -8,6 +8,39 @@ header {
   margin: auto;
 }
 
+@media only screen and (min-width:540px) {
+  .header-text {
+    font-size: 48px;
+  }
+
+  .options-filters {
+    gap: 2%;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .header-text {
+    font-size: 36px;
+  }
+  
+  .filters-categories, .filters-sortby{
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+  }
+  
+  .options-filters {
+    gap: 7%;
+  }
+
+
+}
+
+.header-text {
+  font-family: 'Myriad Pro Semibold';
+  margin: 20px;
+}
+
 .header-options {
   display: flex;
   flex-direction: column;
@@ -18,12 +51,6 @@ header {
 
 .header-text .link {
   color: white;
-}
-
-.header-text {
-  font-family: 'Myriad Pro Semibold';
-  font-size: 48px;
-  margin: 20px;
 }
 
 .header-options input,
@@ -75,12 +102,10 @@ select {
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 2%;
 }
 
 .options-filters div {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;

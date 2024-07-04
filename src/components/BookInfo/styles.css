@@ -9,16 +9,94 @@ body {
   min-height: 100px;
 }
 
+@media only screen and (min-width:540px) {  
+  .book-info__category {
+    font-family: 'Myriad Pro Light';
+    font-size: 18px;
+  }
+  
+  .book-info__name {
+    padding-top: 32px;
+    font-family: 'Myriad Pro Semibold';
+    font-size: 30px;
+  }
+  
+  .book-info__author {
+    padding-top: 10px;
+    color: #a1a1a1;
+    text-decoration: underline;
+    font-family: 'Myriad Pro Light';
+    font-size: 18px;
+  }
+  
+  .book-info__description {
+    margin-top: 32px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    padding: 18px;
+    min-height: 188px;
+    outline: auto;
+    outline-width: 1px;
+    outline-color: #e1e1e1;
+    outline-style: solid;
+    outline-offset: 1;
+    font-family: 'Myriad Pro Semibold';
+    font-size: 18px;
+  }
+
+  .book-info__image img {
+    max-height: 540px;
+  }
+}
+
+@media only screen and (max-width:540px) {
+  .book-info__category {
+    font-family: 'Myriad Pro Light';
+    font-size: 14px;
+  }
+  
+  .book-info__name {
+    padding-top: 32px;
+    font-family: 'Myriad Pro Semibold';
+    font-size: 24px;
+  }
+  
+  .book-info__author {
+    padding-top: 10px;
+    color: #a1a1a1;
+    text-decoration: underline;
+    font-family: 'Myriad Pro Light';
+    font-size: 14px;
+  }
+  
+  .book-info__description {
+    margin-top: 32px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    padding: 18px;
+    min-height: 188px;
+    outline: auto;
+    outline-width: 1px;
+    outline-color: #e1e1e1;
+    outline-style: solid;
+    outline-offset: 1;
+    font-family: 'Myriad Pro Semibold';
+    font-size: 14px;
+  }
+
+  .book-info__image img {
+    max-height: 330px;
+  }
+}
+
 .book-info__image {
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 45%;
 }
 
 .book-info__image img {
-  width: 50%;
-  max-height: 540px;
+  scale: 0.5;
   box-shadow:
     inset 0 0 0 0 #f3f2f1,
     0.5em 0.5em 1em rgba(56, 56, 56, 0.3);
@@ -34,40 +112,4 @@ body {
 .book-info__text {
   padding-left: 7%;
   padding-top: 7%;
-}
-
-.book-info__category {
-  font-family: 'Myriad Pro Light';
-  font-size: 18px;
-}
-
-.book-info__name {
-  padding-top: 32px;
-  font-family: 'Myriad Pro Semibold';
-  font-size: 30px;
-}
-
-.book-info__author {
-  padding-top: 10px;
-  color: #a1a1a1;
-  text-decoration: underline;
-  font-family: 'Myriad Pro Light';
-  font-size: 18px;
-}
-
-.book-info__description {
-  margin-top: 32px;
-  margin-right: 50px;
-  margin-bottom: 20px;
-  padding-top: 18px;
-  padding-left: 20px;
-  padding-bottom: 18px;
-  min-height: 188px;
-  outline: auto;
-  outline-width: 1px;
-  outline-color: #e1e1e1;
-  outline-style: solid;
-  outline-offset: 1;
-  font-family: 'Myriad Pro Semibold';
-  font-size: 18px;
 }

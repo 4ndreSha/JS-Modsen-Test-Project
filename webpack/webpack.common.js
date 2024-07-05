@@ -46,7 +46,7 @@ module.exports = {
       template: path.resolve(__dirname, '..', './src/index.html')
     }),
     new Dotenv({
-			path: `./src/constants/.env`
+			path: `./.env`
 		}),
   ],
   stats: 'errors-only'

@@ -6,7 +6,7 @@ import {useState, useEffect, useCallback} from 'react';
 import {useParams} from 'react-router-dom';
 import $ from 'jquery';
 import ErrorMessage from '../ErrorMessage';
-import { normalizeBookData } from '../ustils/normalizeBookData';
+import { normalizeBookData } from '../utils/normalizeBookData';
 
 function BookInfo() {
   let urlParams = useParams();

@@ -4,7 +4,7 @@ import {getBooks} from '../../api/api';
 import {useState, useEffect, useCallback} from 'react';
 import ErrorMessage from '../ErrorMessage';
 import './styles.css';
-import { normalizeSimpleBookData } from '../ustils/normalizeBookData';
+import { normalizeSimpleBookData } from '../utils/normalizeBookData';
 
 function Books({ form }) {
   const [books, setBooks] = useState([]);

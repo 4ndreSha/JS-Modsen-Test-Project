@@ -4,31 +4,21 @@ import {getBooks} from '../../api/api';
 import {useState, useEffect, useCallback} from 'react';
 import ErrorMessage from '../ErrorMessage';
 import './styles.css';
+import { normalizeSimpleBookData } from '../ustils/normalizeBookData';
 
 function Books({ form }) {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [errorData, setErrorData] = useState();
   const [isError, setIsError] = useState(false);
-  const [totalBooks, setTotalBooks] = useState([]);
-
-  const normalizeBookData = book => {
-    return {
-      id: book.id,
-      imageUrl: book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : null,
-      categories: book.volumeInfo.categories ? book.volumeInfo.categories.join(', ') : 'No categories',
-      title: book.volumeInfo.title || 'No title',
-      authors: book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown author',
-      imageClass: book.imageClass || 'defaultImageClass'
-    };
-  };
+  const [totalBooks, setTotalBooks] = useState([]);  
 
   const searchBooks = useCallback(async () => {
     setLoading(true);
     try {
       const response = await getBooks(form);
       setTotalBooks(response.data.totalItems);
-      const normalizedData = (response.data.items || []).map(normalizeBookData);
+      const normalizedData = (response.data.items || []).map(normalizeSimpleBookData);
       setBooks(normalizedData);
     } catch (error) {
       setIsError(true);
@@ -48,7 +38,7 @@ function Books({ form }) {
     try {
       const response = await getBooks(form, books.length, 30);
 
-      const newBooks = (response.data.items || []).map(normalizeBookData);
+      const newBooks = (response.data.items || []).map(normalizeSimpleBookData);
       setBooks(prevBooks => [...prevBooks, ...newBooks]);
     } catch (error) {
       setIsError(true);

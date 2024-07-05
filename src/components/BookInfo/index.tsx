@@ -6,6 +6,7 @@ import {useState, useEffect, useCallback} from 'react';
 import {useParams} from 'react-router-dom';
 import $ from 'jquery';
 import ErrorMessage from '../ErrorMessage';
+import { normalizeBookData } from '../ustils/normalizeBookData';
 
 function BookInfo() {
   let urlParams = useParams();
@@ -14,20 +15,6 @@ function BookInfo() {
   const [loading, setLoading] = useState(false);
   const [errorData, setErrorData] = useState();
   const [isError, setIsError] = useState(false);
-
-  const normalizeBookData = book => {
-    return {
-      id: book.id,
-      imageUrl: book.volumeInfo.imageLinks
-        ? book.volumeInfo.imageLinks.large || book.volumeInfo.imageLinks.medium || book.volumeInfo.imageLinks.thumbnail
-        : null,
-      categories: book.volumeInfo.categories ? book.volumeInfo.categories.join(', ') : 'No categories',
-      title: book.volumeInfo.title || 'No title',
-      authors: book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown author',
-      imageClass: book.imageClass || 'defaultImageClass',
-      description: book.volumeInfo.description.replaceAll(/<.{0,3}>/g, "") || 'No description'
-    };
-  };
 
   const getBook = useCallback(async () => {
     setLoading(true);
@@ -49,6 +36,8 @@ function BookInfo() {
     getBook();
   }, [getBook]);
 
+  var bookDescription = (book.description != undefined) ? book.description.replaceAll(/<.{0,3}>/g, "") : 'No description'
+
   return (
     <>
       {loading ? (
@@ -65,7 +54,7 @@ function BookInfo() {
                   <div class='book-info__category'>{book.categories}</div>
                   <div class='book-info__name'>{book.title}</div>
                   <div class='book-info__author'>{book.authors}</div>
-                  <div class='book-info__description'>{book.description}</div>
+                  <div class='book-info__description'>{bookDescription}</div>
                 </div>
               </div>
             </section>

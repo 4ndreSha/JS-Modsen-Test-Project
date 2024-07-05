@@ -9,7 +9,7 @@ function BookCard(props: any) {
     <>
       <div class='book-card' key={bookData.id}>
         <div class='book-card__image'>
-          <img src={bookData.imageUrl} />
+          <img src={bookData.imageThumbUrl} />
         </div>
         <div class='book-card__info'>
           <div class='book-card__category truncate'>{bookData.categories}</div>

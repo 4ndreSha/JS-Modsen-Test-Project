@@ -25,7 +25,7 @@ function BookInfo() {
       title: book.volumeInfo.title || 'No title',
       authors: book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown author',
       imageClass: book.imageClass || 'defaultImageClass',
-      description: book.volumeInfo.description || 'No description'
+      description: book.volumeInfo.description.replaceAll(/<.{0,3}>/g, "") || 'No description'
     };
   };
 
